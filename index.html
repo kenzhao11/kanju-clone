@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>阿噗影视</title>
+    <meta name="apple-mobile-web-app-title" content="阿噗影视" />
+    <link rel="manifest" href="/kanju-clone/manifest.webmanifest" />
+    <meta name="description" content="阿噗影视：用一句话就能找到想看的剧，本周追剧日历、片单与播放记录一应俱全。" />
+    <link rel="icon" href="/kanju-clone/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/kanju-clone/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/kanju-clone/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/kanju-clone/apple-touch-icon.png" />
+      <meta name="theme-color" content="#0b1f2b" />
+    <script>
+      // 首屏就定好主题，避免白色主题先闪一下深色
+      try {
+        var q = new URLSearchParams(location.search).get('theme')
+        var m = ['dark', 'light', 'auto'].indexOf(q) >= 0 ? q : (localStorage.getItem('kj-theme-mode') || localStorage.getItem('kj-theme') || 'dark')
+        document.documentElement.dataset.theme = m === 'auto' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : m
+        document.documentElement.dataset.themeMode = m
+      } catch (e) {}
+    </script>
+  <script type="module" crossorigin src="/kanju-clone/assets/home-C2auPXew.js"></script>
+  <link rel="modulepreload" crossorigin href="/kanju-clone/assets/styles-gQsbNd0W.js">
+  <link rel="modulepreload" crossorigin href="/kanju-clone/assets/shell-CcX8x_5v.js">
+  <link rel="modulepreload" crossorigin href="/kanju-clone/assets/data-COe7SVsj.js">
+  <link rel="stylesheet" crossorigin href="/kanju-clone/assets/styles-D0h9MtjY.css">
+</head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
